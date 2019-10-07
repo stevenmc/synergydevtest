@@ -15,17 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Settings and links
  *
  * @package    report
- * @subpackage completion
- * @copyright  2009 Catalyst IT Ltd
- * @author     Aaron Barnes <aaronb@catalyst.net.nz>
+ * @subpackage synergydevtest
+ * @copyright  2008 Tim Hunt
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2019052001;          // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires  = 2019051100;          // Requires this Moodle version
-$plugin->component = 'report_completion'; // Full name of the plugin (used for diagnostics)
+$ADMIN->add('reports', new admin_externalpage(
+	'reportsynergydevtest',
+	get_string('pluginname', 'report_synergydevtest'),
+	"$CFG->wwwroot/report/synergydevtest/index.php",
+	'report/synergydevtest:view'
+	));
+
+// no report settings
+$settings = null;

@@ -709,8 +709,14 @@ $CFG->admin = 'admin';
 //=========================================================================
 // 9. PHPUNIT SUPPORT
 //=========================================================================
-// $CFG->phpunit_prefix = 'phpu_';
-// $CFG->phpunit_dataroot = '/home/example/phpu_moodledata';
+$CFG->phpunit_prefix = 'phpu_';
+$CFG->phpunit_dataroot = '/var/www/moodledata_phpunit';
+$CFG->phpunit_dbtype    = 'mariadb';      // 'pgsql', 'mariadb', 'mysqli', 'mssql', 'sqlsrv' or 'oci'
+$CFG->phpunit_dblibrary = 'native';     // 'native' only at the moment
+$CFG->phpunit_dbhost    = '127.0.0.1';  // eg 'localhost' or 'db.isp.com' or IP
+$CFG->phpunit_dbname    = 'moodle_phpunit';     // database name, eg moodle
+$CFG->phpunit_dbuser    = 'moodleuser';   // your database username
+$CFG->phpunit_dbpass    = 'synergy';   // your database password
 // $CFG->phpunit_directorypermissions = 02777; // optional
 // $CFG->phpunit_profilingenabled = true; // optional to profile PHPUnit runs.
 //
